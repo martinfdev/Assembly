@@ -2,3 +2,5 @@ masm
 masm611
 *.EXE
 *.OBJ
+*.MAP
+*.txt
