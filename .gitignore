@@ -1,2 +1,4 @@
 masm
 masm611
+*.EXE
+*.OBJ
