@@ -1,8 +1,15 @@
 print macro buffered
-MOV AX, @data
-MOV DS, DX
-MOV AH, 09H   ;print macro buffered
-MOV DX, offset buffered ;print macro buffered
-int 21h
+    mov ax, @data
+    mov ds, ax
+    lea dx, buffered
+    mov ah, 09H
+    int 21H
+    ;clear registers
+    call clear_registers
 endm
 
+;exit to system
+exit macro 
+    mov ax, 4c00h
+    int 21h
+endm
